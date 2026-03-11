@@ -104,31 +104,6 @@ cargo run --release -- \
 
 ---
 
-## Code structure
-
-- **`src/math.rs`**  
-  Mathematical core:
-  - construction of local matrices `b_e`, `c_e` and the element stiffness matrix;
-  - assembly of the global stiffness matrix;
-  - application of temperature boundary conditions;
-  - solving the system in dense (`solve`) and sparse (`sparse_sol`) variants.
-
-- **`src/visualize.rs`**  
-  Visualization:
-  - temperature field from Ansys APDL;
-  - temperature field from the Rumyantsev FEM;
-  - difference field;
-  - temperature plots over nodes;
-  - saving/opening an interactive plot.
-
-- **`src/cli.rs`**  
-  Command-line argument definitions (`clap`).
-
-- **`src/main.rs`**  
-  Entry point: argument parsing, file reading, solver and visualization orchestration, execution time logging.
-
----
-
 ## Theoretical background
 
 The implementation follows the classical steady-state heat conduction formulation and uses the finite element method according to Rumyantsev (triangular elements, linear approximation).  
