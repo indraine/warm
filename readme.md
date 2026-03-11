@@ -46,7 +46,7 @@
 Склонировать репозиторий и собрать проект:
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/indraine/warm
 cd warm
 cargo build --release
 ```
